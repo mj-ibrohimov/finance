@@ -204,7 +204,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
     return (
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <h1 className="text-2xl font-bold text-gray-900 mb-4">Article Not Found</h1>
-        <p className="text-gray-600 mb-8">The article you're looking for doesn't exist.</p>
+        <p className="text-gray-600 mb-8">The article you&apos;re looking for doesn&apos;t exist.</p>
         <Button asChild>
           <Link href="/articles">
             <ArrowLeft className="h-4 w-4 mr-2" />

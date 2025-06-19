@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "backend": "cd backend && python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+    "dev:all": "concurrently \"npm run dev\" \"npm run backend\"",
+    "install:backend": "cd backend && pip install -r requirements.txt",
+    "setup": "npm install && npm run install:backend",
+    "db:setup": "cd backend && python -c \"from app.database.database import create_tables; create_tables(); print('Database tables created successfully')\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -69,5 +74,8 @@
     "zod": "^3.23.8",
     "@tanstack/react-query": "^5.17.0",
     "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

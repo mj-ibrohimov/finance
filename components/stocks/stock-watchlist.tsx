@@ -25,7 +25,7 @@ export function StockWatchlist() {
       <CardHeader className="flex flex-row items-center justify-between">
         <div>
           <CardTitle>My Watchlist</CardTitle>
-          <CardDescription>Stocks you're monitoring</CardDescription>
+                      <CardDescription>Stocks you&apos;re monitoring</CardDescription>
         </div>
         <Button size="sm" variant="outline">
           <Plus className="h-4 w-4 mr-1" />
